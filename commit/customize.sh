@@ -23,7 +23,8 @@ sed -i "s/17.01 Lienol=\"kenzo'\"/g" package/default-settings/files/zzz-default-
 sed -i "s/luciversion=\"$date1'\"/g" package/default-settings/files/zzz-default-settings
 
 # 修改自定义固件名,增加编译日期(by:kenzo）
-sed -i "s/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)=\"IMG_PREFIX:=$date-$(VERSION_DIST_SANITIZED)'\"/g" include/image.mk
+sed -i 's/IMG_PREFIX:=$(VERSION_DIST_SANITIZED)/IMG_PREFIX:=$(shell date +%m-%d)-$(VERSION_DIST_SANITIZED)/g' include/image.mk
+
 
 
 exit
