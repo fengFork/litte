@@ -6,7 +6,7 @@
 
 include $(TOPDIR)/rules.mk
 
-LUCI_TITLE:=Argon_new kenzo
+LUCI_TITLE:=Argon_new
 LUCI_DEPENDS:=
 PKG_VERSION:=1.7.2
 PKG_RELEASE:=20210309
